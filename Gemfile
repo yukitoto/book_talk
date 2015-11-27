@@ -4,7 +4,7 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.2'
 # Use SCSS for stylesheets
-gem 'sqlite3'
+
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
@@ -37,6 +37,7 @@ gem 'therubyracer'
 # gem 'capistrano-rails', group: :development
 
 group :development, :test do
+  gem 'sqlite3',     '1.3.9'
   gem 'quiet_assets'
   gem 'bullet'                                    
   gem 'byebug'
