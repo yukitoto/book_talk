@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'mypage/home'
+
   get 'comment/new'
 
   get 'comment/create'
@@ -8,6 +10,8 @@ Rails.application.routes.draw do
   get 'comment/update'
 
   get 'comment/destroy'
+
+  get 'mypage/home'
 
   devise_for :users
   devise_for :admin_users, ActiveAdmin::Devise.config

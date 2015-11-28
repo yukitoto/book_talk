@@ -1,0 +1,11 @@
+<p><%= current_user.last_name %><%= current_user.first_name %> </p>
+
+<% @topics.each_with_index do |topic,count| %>
+  <% @count = count %>
+<% end %>
+<p><%= @count %>投稿</p>
+
+<% @topics.each do |topic,count| %>
+  <p><%= topic.title %></p>
+  <p><%= topic.detail %></p>
+<% end %>
