@@ -1,0 +1,19 @@
+---
+development:
+  cloud_name: hqffl4ph2
+  api_key: '642678462838345'
+  api_secret: iK0uE3BSkxYfk9zDeElwvRrQ0O0
+  enhance_image_tag: true
+  static_image_support: false
+production:
+  cloud_name: hqffl4ph2
+  api_key: '642678462838345'
+  api_secret: iK0uE3BSkxYfk9zDeElwvRrQ0O0
+  enhance_image_tag: true
+  static_image_support: true
+test:
+  cloud_name: hqffl4ph2
+  api_key: '642678462838345'
+  api_secret: iK0uE3BSkxYfk9zDeElwvRrQ0O0
+  enhance_image_tag: true
+  static_image_support: false
