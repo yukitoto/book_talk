@@ -1,7 +1,19 @@
 Rails.application.routes.draw do
+  get 'comment/new'
+
+  get 'comment/create'
+
+  get 'comment/edit'
+
+  get 'comment/update'
+
+  get 'comment/destroy'
+
   devise_for :users
   devise_for :admin_users, ActiveAdmin::Devise.config
-  resources :topics
+  resources :topics do
+    resources :comments
+  end
   ActiveAdmin.routes(self)
 
   # The priority is based upon order of creation: first created -> highest priority.

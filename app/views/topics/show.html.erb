@@ -4,6 +4,19 @@
 <p><%= @topic.detail %></p>
 <p>作品名：<%= @topic.book_title %>/著者：<%= @topic.main_author %></p>
 <% if @topic.user.id == current_user.id %>
-<%= link_to 'このトピックを編集する', edit_topic_path(params[:id])%>
-<%= link_to 'このトピックを削除する', topic_path(params[:id]), method: :delete, data:{ confirm: '本当に削除してよろしいですか？'} %>
+  <p>
+  <%= link_to 'このトピックを編集する', edit_topic_path(params[:id])%>
+  <%= link_to 'このトピックを削除する', topic_path(params[:id]), method: :delete, data:{ confirm: '本当に削除してよろしいですか？'} %>
+  </p>
 <% end %>
+
+<p><%= link_to 'コメントする', new_topic_comment_path(@topic.id) %></p>
+
+<% @comments.each do |comment| %>
+  <p><%= comment.comment %></p>
+  <p>
+  <%= link_to '編集する', edit_topic_comment_path(params[:id], comment.id) %>
+  <%= link_to '削除する', topic_comment_path(@topic.id, comment.id), method: :delete, data:{ confirm: '本当に削除してよろしいですか？'} %>
+  <p>
+<% end %>
+

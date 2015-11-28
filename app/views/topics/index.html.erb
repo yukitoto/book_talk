@@ -5,4 +5,8 @@
   <p><%= link_to topic.title, topic_path(topic.id) %></p>
 
   <p>作品名：<%= topic.book_title %>/著者：<%= topic.main_author %></p>
+
+  <% topic.comments.each do |comment| %>
+    <p><%= comment.comment %></p>
+  <% end %>
 <% end %>
