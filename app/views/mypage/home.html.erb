@@ -1,4 +1,5 @@
 <p><%= current_user.last_name %><%= current_user.first_name %> </p>
+<%= image_tag @user.image.url(:thumb) %>
 
 <% @topics.each_with_index do |topic,count| %>
   <% @count = count %>
