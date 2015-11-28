@@ -1,0 +1,9 @@
+<%= link_to "<=", topics_path %>
+<h3><%= @topic.title %></h3>
+<p> <%= @topic.user.last_name %><%= @topic.user.first_name %></p>
+<p><%= @topic.detail %></p>
+<p>作品名：<%= @topic.book_title %>/著者：<%= @topic.main_author %></p>
+<% if @topic.user.id == current_user.id %>
+<%= link_to 'このトピックを編集する', edit_topic_path(params[:id])%>
+<%= link_to 'このトピックを削除する', topic_path(params[:id]), method: :delete, data:{ confirm: '本当に削除してよろしいですか？'} %>
+<% end %>

@@ -1,0 +1,24 @@
+<% if @topic.errors.any? %>
+  <ul>
+    <% @topic.errors.full_messages.each do |message| %>
+      <li><%= message %></li>
+    <% end %>
+  </ul>
+<% end %>
+
+<%= form_for [@topic] do |f| %>
+  <p><%= f.label :タイトル %></p>
+  <%= f.text_field :title %>
+  
+  <p><%= f.label :詳細 %></p>
+  <%= f.text_area :detail %>
+  
+  <p><%= f.label :本のタイトル %></p>
+  <%= f.text_field :book_title %>
+  
+  <p><%= f.label :本の主な作者 %></p>
+  <%= f.text_field :main_author %>
+
+  <%= f.hidden_field :user_id , value: current_user.id %>
+  <p><%= f.submit %></p>
+<% end %>
