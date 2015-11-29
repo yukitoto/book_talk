@@ -1,5 +1,5 @@
 <p><%= current_user.last_name %><%= current_user.first_name %> </p>
-<%= image_tag @user.image.url(:thumb) %>
+<%= image_tag(@user.image.url(:thumbnail)) %>
 
   <% @count = @topics.count %>
 <p><%= @count %>投稿</p>

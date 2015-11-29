@@ -25,6 +25,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'activeadmin', github: 'gregbell/active_admin'
 gem 'devise'
 gem 'carrierwave'
+gem 'cloudinary'
 gem 'rmagick', require: 'RMagick'
 gem 'therubyracer'
 
