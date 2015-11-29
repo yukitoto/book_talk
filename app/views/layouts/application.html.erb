@@ -1,32 +1,44 @@
-<!DOCTYPE html>
 <html>
-<head>
-  <title>ShareImpression</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= stylesheet_link_tag    'main', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'main', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
 
-  <% if notice %>
-    <p class="alert alert-notice"><%= notice %></p>
-  <% end %>
-  <% if alert %>
-    <p class="alert alert-error"><%= alert %></p>
-  <% end %>
+  <head>
+    <title>Book Talk</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= stylesheet_link_tag    'main', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'main', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
+    <header id="header">
+    <!-- Logo -->
+    <h1 id="logo">Book Talk</h1>
+    <!-- Nav -->
+    <nav id="nav">
+    <ul>
+      <% if user_signed_in? %>
+        <%# link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> |
+        <li><%= link_to "ホーム", topics_path %></li>
+        <li><%= link_to "投稿", new_topic_path%></li>
+        <li><%= link_to "マイページ",mypage_home_path %></li>
+        <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %></li>
+      <% else %>
+        <li><%= link_to "アカウント登録", new_user_registration_path, :class => 'navbar-link'  %></li>
+        <li><%= link_to "ログイン", new_user_session_path, :class => 'navbar-link'  %></li>
+      <% end %>
+    </ul>
+    </nav>
+    </header>
 
-  <%= yield %>
+    <% if notice %>
+      <p class="alert alert-notice"><%= notice %></p>
+    <% end %>
+    <% if alert %>
+      <p class="alert alert-error"><%= alert %></p>
+    <% end %>
 
-</body>
+    <%= yield %>
+
+  </body>
   <p class="navbar-text pull-right">
-  <% if user_signed_in? %>
-    Logged in as <strong><%= current_user.email %></strong>.
-    <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> |
-    <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
-  <% else %>
-    <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %> |
-    <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
-  <% end %>
 </html>
