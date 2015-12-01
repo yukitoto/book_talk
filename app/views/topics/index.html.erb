@@ -1,7 +1,5 @@
-<%= link_to "トピックを投稿する", new_topic_path %>
-<%= link_to "マイページ", mypage_home_path %>
+<div class="container">
 <% @topics.each do |topic| %>
-  <p> <%= topic.user.last_name %><%= topic.user.first_name %></p>
 
   <p><%= link_to topic.title, topic_path(topic.id) %></p>
 
@@ -11,3 +9,4 @@
     <p><%= comment.comment %></p>
   <% end %>
 <% end %>
+</div>
