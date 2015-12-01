@@ -15,7 +15,6 @@
     <nav id="nav">
     <ul>
       <% if user_signed_in? %>
-        <%# link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> |
         <li><%= link_to "ホーム", topics_path %></li>
         <li><%= link_to "投稿", new_topic_path%></li>
         <li><%= link_to "マイページ",mypage_home_path %></li>
@@ -37,6 +36,7 @@
 
     <%= yield %>
 
+        <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %>
   </body>
   <p class="navbar-text pull-right">
 </html>

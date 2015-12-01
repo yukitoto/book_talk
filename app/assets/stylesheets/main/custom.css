@@ -1,0 +1,64 @@
+#intro .main style1 .content h2
+{
+    font-size:70px;
+}
+
+#one
+{
+		background: url("main/overlay.png"), url("../../main/one.jpg");
+    height:450px;
+		background-size: 156px 156px cover;
+		background-attachment: fixed, fixed;
+		background-position: top left, center center;
+	}
+
+	#two {
+		background: url("main/overlay.png"), url("../../main/two.jpg");
+         height:450px;
+		background-size: 256px 256px, cover;
+		background-attachment: fixed, fixed;
+		background-position: top left, center center;
+	}
+
+#three
+{
+		background: url("main/overlay.png"), url("../../main/one.jpg");
+    height:450px;
+		background-size: 156px 156px cover;
+		background-attachment: fixed, fixed;
+		background-position: top left, center center;
+	}
+
+.more-tp-1
+{
+    background-color:darkred;
+}
+.more-tp-2
+{
+    background:url("main/overlay.png"), url("../../main/two.jpg");
+}
+.more-tp-3
+{
+    background:url("main/overlay.png"), url("../../main/two.jpg");
+}
+.more-tp-4
+{
+    background: url("main/overlay.png"), url("../../main/one.jpg");
+}
+.more-tp-5
+{
+    background: url("main/overlay.png"), url("../../main/one.jpg");
+}
+.more-tp-6
+{
+    background:url("main/overlay.png"), url("../../main/two.jpg");
+}
+
+.block_to_inline{
+	display: inline;
+}
+
+.user-wrapper{
+  padding: 15px;
+}
+
