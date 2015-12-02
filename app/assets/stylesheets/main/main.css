@@ -3284,7 +3284,7 @@
 				height: auto;
 				line-height: inherit;
 				text-align: center;
-				padding: 2em 1em 2em 1em;
+				padding: 23px 20px;
 			}
 
 				#footer .actions {
@@ -3293,7 +3293,7 @@
 					top: 0;
 					height: auto;
 					line-height: inherit;
-					margin: 0 0 1em 0;
+					margin: 0 0 10px 0;
 				}
 
 				#footer .menu {
@@ -3302,6 +3302,7 @@
 					top: 0;
 					height: auto;
 					line-height: inherit;
+          font-size:15px;
 				}
 
 	}
