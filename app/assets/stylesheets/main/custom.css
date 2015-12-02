@@ -83,8 +83,10 @@
 }
 
 .header-wrapper a{
-  font-size: 15px;
+  font-size: 12px;
   padding:0 2px !important;
+  line-height: 50px !important;
+
 }
 
 .header-wrapper li{
