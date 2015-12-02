@@ -2,18 +2,17 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 body{
-  background: rgb(230,230,230);
+  background: white;
 }
   
 
 .topics-wrapper{
-  padding: 7px 0px;
+  padding: 10px 10px;
 }
 
-.topic-card{
+.topic-block{
   background: white;
-  margin-bottom: 9px;
-  padding: 14px 14px 10px 14px;
+  padding: 8px 10px;
 }
 
 .topic-card-link{
@@ -21,7 +20,7 @@ body{
 }
 
 .topic-title{
-  margin-bottom: 0px;
+  margin-bottom: 1px;
   font-size: 16px;
   color: black; 
   font-weight:600;
@@ -52,4 +51,25 @@ body{
   font-size: 10px;
   color: #999;
   line-height:10px;
+}
+
+.topic-hr{
+  width: 97%;
+}
+
+.topic-user-image{
+  border-radius: 50%; 
+  width: 17px;
+  height: 17px;
+  vertical-align: middle;
+}
+
+.topic-user-name{
+  margin-bottom: 0px;
+  font-size: 13px;
+  line-height:17px;
+}
+
+.topic-user{
+  vertical-align: middle;
 }
