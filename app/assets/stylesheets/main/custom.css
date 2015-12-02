@@ -1,3 +1,4 @@
+
 #intro .main style1 .content h2
 {
     font-size:70px;
@@ -62,3 +63,31 @@
   padding: 15px;
 }
 
+.logo{
+  margin-left: 15px;
+}
+
+.header-icon{
+  font-size: 38px !important;
+  padding:4px;
+  vertical-align: middle;
+}
+
+.menu{
+  margin-right:15px;
+  float:center;
+}
+
+.menu li{
+  padding-top: 10 !important;
+}
+
+.header-wrapper a{
+  font-size: 15px;
+  padding:0 2px !important;
+}
+
+.header-wrapper li{
+  height: 100%;
+  vertical-align: middle;
+}
