@@ -79,17 +79,20 @@
 }
 
 .menu li{
-  padding-top: 10 !important;
+	padding-top: 10 !important;
+}
+
+.header-wrapper ul{
+	line-height:50px;
 }
 
 .header-wrapper a{
-  font-size: 12px;
-  padding:0 2px !important;
-  line-height: 50px !important;
+	font-size: 12px;
+	padding:0 2px !important;
 
 }
 
 .header-wrapper li{
-  height: 100%;
-  vertical-align: middle;
+	line-height:50px;
+	vertical-align: middle;
 }
