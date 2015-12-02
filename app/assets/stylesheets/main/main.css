@@ -1806,7 +1806,7 @@
 		font-weight: 300;
 		font-size: 18pt;
 		line-height: 1.75em;
-		color: #39454b;
+		color: black;
 		letter-spacing: 0.5px;
 	}
 
@@ -2819,10 +2819,9 @@
 		top: 0;
 		width: 100%;
 		background: #fff;
-		background: rgba(255, 255, 255, 0.95);
+		background: rgba(255, 255, 255);
 		height: 3em;
 		line-height: 3em;
-		box-shadow: 0 0 0.15em 0 rgba(0, 0, 0, 0.1);
 	}
 
 	body {
@@ -2835,7 +2834,7 @@
 		top: 0;
 		height: 3em;
 		line-height: 3em;
-		letter-spacing: -1px;
+		letter-spacing: 1px;
 	}
 
 		#logo a {
@@ -3314,7 +3313,7 @@
 
 			body {
 				min-width: 320px;
-				font-size: 12pt;
+				font-size: 16pt;
 				line-height: 1.5em;
 			}
 
@@ -3386,12 +3385,12 @@
 		/* Header */
 
 			#header {
-				height: 2.5em;
-				line-height: 2.5em;
+				height: 50px;
+				line-height: 50px;
 			}
 
 			body {
-				padding-top: 2.5em;
+				padding-top: 50px;
 			}
 
 			#logo {
@@ -3399,8 +3398,8 @@
 				position: relative;
 				left: 0;
 				top: 0;
-				height: 2.5em;
-				line-height: 2.5em;
+				height: 50px;
+				line-height: 50px;
 			}
 
 				#logo a {
