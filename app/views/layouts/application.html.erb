@@ -11,7 +11,9 @@
     <header id="header">
     <div class="header-wrapper">
       <!-- Logo -->
-      <h1 id="logo" class="block_to_inline logo">Book Talk</h1>
+      <%= link_to topics_path, class: 'logo-link' do %>
+        <h1 id="logo" class="block_to_inline logo">Book Talk</h1>
+      <% end %>
       <!-- Nav -->
       <nav id="nav">
       <ul>
@@ -42,13 +44,13 @@
       <li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
       <li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
 
-    <!-- Menu -->
-    <ul class="menu">
-      <li>copyright &copy; ChocolateCrunch</li>
-    </ul>
+      <!-- Menu -->
+      <ul class="menu">
+        <li>copyright &copy; ChocolateCrunch</li>
+      </ul>
 
-    </footer>
+      </footer>
 
-  </body>
-  <p class="navbar-text pull-right">
-</html>
+    </body>
+    <p class="navbar-text pull-right">
+  </html>

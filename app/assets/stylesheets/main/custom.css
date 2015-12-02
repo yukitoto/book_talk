@@ -96,3 +96,8 @@
 	line-height:50px;
 	vertical-align: middle;
 }
+
+.logo-link{
+  text-decoration: none;
+  color: inherit;
+}
