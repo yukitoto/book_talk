@@ -3,7 +3,7 @@ class TopicsController < ApplicationController
   before_action :authenticate_user!,only:[:new,:create,:edit,:update,:destroy]
 
   def index
-    @topics = Topic.all
+    @topics = Topic.all.reorder('created_at DESC')
   end
 
   def show
