@@ -2819,7 +2819,7 @@
 		top: 0;
 		width: 100%;
 		background: #fff;
-		background: rgba(255, 255, 255);
+		background: rgb(255, 255, 255);
 		height: 3em;
 		line-height: 3em;
 	}
