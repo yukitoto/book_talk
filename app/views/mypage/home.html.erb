@@ -1,12 +1,27 @@
-<p><%= current_user.last_name %><%= current_user.first_name %> </p>
-<%= image_tag(@user.image.url(:thumbnail)) %>
+<div class="my-page-wrapper">
+  <div class="my-page-user-description-wrapper">
+    <%= image_tag(@user.image.url(:thumbnail),:class => "mypage-user-image") %>
+    <p class="mypage-user-name"><%= current_user.last_name %><%= current_user.first_name %></p>
+    <p class="mypage-user-introduction"><%= current_user.last_name %><%= current_user.last_name %><%= current_user.last_name %><%= current_user.last_name %><%= current_user.last_name %><%= current_user.last_name %><%= current_user.last_name %><%= current_user.last_name %><%= current_user.last_name %><%= current_user.last_name %><%= current_user.last_name %><%= current_user.last_name %><%= current_user.last_name %><%= current_user.last_name %><%= current_user.last_name %><%= current_user.last_name %></p>
+    <p class="mypage-user-edit"><%= link_to 'プロフィール編集', edit_user_registration_path, :class => 'navbar-link' %></p>
+  </div> 
 
-  <% @count = @topics.count %>
-<p><%= @count %>投稿</p>
+  <hr class="topic-hr">
+  <% @topics.each do |topic| %>
+    <div class="topic-block">
+      <%= link_to topic_path(topic.id),class: 'topic-card-link' do %>
+        <p class="topic-title"><%= topic.title %></p>
+        <p class="topic-book-detail"><%= topic.book_title %>(<%= topic.main_author %>)</p>
+        <div class="topic-detail-wrapper">
+          <p class="topic-detail"><%= topic.detail %></p>
+        </div>
+        <div class="add-info-wrapper">
+          <% @count = topic.comments.count %>
+          <p class="add-info">投稿日時：<%= topic.created_at.year %>/<%= topic.created_at.month %>/<%= topic.created_at.day %>  コメント数：<%= @count %></p>
+        </div>
+      <% end %>
+    </div>
+    <hr class="topic-hr">
+  <% end %>
 
-<% @topics.each do |topic,count| %>
-  <p><%= topic.title %></p>
-  <p><%= topic.detail %></p>
-<% end %>
-
-<%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %>
+</div>
