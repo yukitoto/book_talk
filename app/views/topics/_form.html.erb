@@ -6,19 +6,35 @@
   </ul>
 <% end %>
 
-<%= form_for [@topic] do |f| %>
-  <p><%= f.label :タイトル %></p>
-  <%= f.text_field :title %>
-  
-  <p><%= f.label :詳細 %></p>
-  <%= f.text_area :detail %>
-  
-  <p><%= f.label :本のタイトル %></p>
-  <%= f.text_field :book_title %>
-  
-  <p><%= f.label :本の主な作者 %></p>
-  <%= f.text_field :main_author %>
+<div class="box container 75%">
+  <%= form_for [@topic] do |f| %>
+    <div class="row 50%">
+      <div class="6u 12u(mobile)">
+        <%= f.text_field :title ,:placeholder => "タイトル"%>
+      </div>
+      <div class="6u 12u(mobile)">
+        <%= f.text_field :book_title ,:placeholder => "作品名"%>
+      </div>
+      <div class="6u 12u(mobile)">
+        <%= f.text_field :main_author ,:placeholder => "主な著者"%>
+      </div>
+    </div>
+    <div class="row 50%">
+      <div class="12u">
+        <%= f.text_area :detail ,:placeholder => "投稿したい内容" %>
+      </div>
+    </div>
+    <div class="row">
+      <div class="12u">
+        <ul class="actions">
+          <li>
+          <%= f.submit %>
+          </li>
+        </ul>
+      </div>
+    </div>
+  <% end %>
 
-  <%= f.hidden_field :user_id , value: current_user.id %>
-  <p><%= f.submit %></p>
-<% end %>
+</div>
+  </div>
+  </section>

@@ -1,4 +1,9 @@
-<%= link_to "<=", topics_path %>
-<h3>トピックを編集</h3>
+<section id="contact" class="main style3 secondary">
+<div class="content container">
+  <header >
+  <h4 class="post-topic-title">投稿を編集する</h4>
+  </header>
 
 <%= render :partial => 'form' %>
+
+<p class="delete-topic"><%= link_to 'このトピックを削除する', topic_path(params[:id]), method: :delete, data:{ confirm: '本当に削除してよろしいですか？'} %></p>

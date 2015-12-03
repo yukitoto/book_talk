@@ -1,4 +1,5 @@
 @import url("http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,900");
+
 @import url("font-awesome.min.css");
 
 /*
@@ -2364,7 +2365,7 @@
 		}
 
 			.main.style3 .content > header {
-				margin-bottom: 2em;
+				margin-bottom: 35px;
 			}
 
 			.main.style3.primary {
@@ -3383,7 +3384,7 @@ body.is-touch .poptrox-popup .closer {
 
 			.main.style3 {
 				text-align: center;
-				padding: 3em 10px 3em 10px;
+				padding: 35px 10px 3em 10px;
 		}
 
 		/* Header */
