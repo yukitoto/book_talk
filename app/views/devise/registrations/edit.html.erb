@@ -3,54 +3,44 @@
 
   <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
     <%= devise_error_messages! %>
-      <div class="field">
-        <%= f.label :姓 %>
-        <%= f.text_field :last_name %>
-      </div>
+    <div class="field">
+      <p><%= f.label "User Name(20words)".to_sym %></p>
+      <p><%= f.text_field :user_name %></p>
+    </div>
 
-      <div class="field">
-        <%= f.label :名 %>
-        <p><%= f.text_field :first_name %></p>
-      </div>
+    <div class="field">
+      <p><%= f.label :email %></p>
+      <p><%= f.email_field :email, autofocus: true %></p>
+    </div>
 
-      <div class="field">
-        <p><%= f.label :email %></p>
-        <p><%= f.email_field :email, autofocus: true %></p>
-      </div>
+    <div class="field">
+      <p><%= f.label "Profile(30words)".to_sym %></p>
+      <p><%= f.text_area :introduction %></p>
+    </div>
 
-      <div class="field">
-        <p><%= f.label :プロフ画像 %></p>
-        <p><%= f.file_field :image %></p>
-        <p><%= f.check_box :remove_avatar %> 画像を削除する</p>
-        <%= f.hidden_field :avatar_cache %>
-      </div>
+    <div class="field">
+      <p><%= f.label :プロフ画像 %></p>
+      <p><%= f.file_field :image %></p>
+      <p><%= f.check_box :remove_avatar %> 画像を削除する</p>
+      <%= f.hidden_field :avatar_cache %>
+    </div>
 
-      <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
-        <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
-      <% end %>
-
-      <div class="field">
-        <p> <%= f.label :password %> <i>(leave blank if you don't want to change it)</i></p>
-        <p><%= f.password_field :password, autocomplete: "off" %></p>
-      </div>
-
-      <div class="field">
-        <p><%= f.label :password_confirmation %></p>
-        <p><%= f.password_field :password_confirmation, autocomplete: "off" %></p>
-      </div>
-
-      <div class="field">
-        <p><%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i></p>
-        <p><%= f.password_field :current_password, autocomplete: "off" %></p>
-      </div>
-
-      <div class="actions">
-        <p><%= f.submit "Update",:class => "style2"%></p>
-      </div>
+    <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+      <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
     <% end %>
-    <p><%= link_to "戻る", :back %></p>
 
-    <p><h5>アカウントを削除する</h5></p>
-    <p>わたしたちのサービスが気に入りませんでしたか？</p><p> <%= link_to "アカウント削除", registration_path(resource_name), data: { confirm: "データもすべて消去されます。本当によろしいですか？" }, method: :delete %></p>
+    <div class="field">
+      <p><%= f.label :現在のパスワード %></p>
+      <p><%= f.password_field :current_password, autocomplete: "off" %></p>
+    </div>
 
-  </div>
+    <div class="actions">
+      <p><%= f.submit "Update",:class => "style2"%></p>
+    </div>
+  <% end %>
+  <p><%= link_to "戻る", :back %></p>
+
+  <p><h5>アカウントを削除する</h5></p>
+  <p>わたしたちのサービスが気に入りませんでしたか？</p><p> <%= link_to "アカウント削除", registration_path(resource_name), data: { confirm: "データもすべて消去されます。本当によろしいですか？" }, method: :delete %></p>
+
+</div>

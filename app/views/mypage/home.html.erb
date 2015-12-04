@@ -1,8 +1,8 @@
 <div class="my-page-wrapper">
   <div class="my-page-user-description-wrapper">
     <%= image_tag(@user.image.url(:thumbnail),:class => "mypage-user-image") %>
-    <p class="mypage-user-name"><%= truncate( "ニックネームニックネームニックネームニックネームニックネーム",:length => 12)%></p>
-    <p class="mypage-user-introduction"><%= current_user.last_name %><%= current_user.last_name %><%= current_user.last_name %><%= current_user.last_name %><%= current_user.last_name %><%= current_user.last_name %><%= current_user.last_name %><%= current_user.last_name %><%= current_user.last_name %><%= current_user.last_name %><%= current_user.last_name %><%= current_user.last_name %><%= current_user.last_name %><%= current_user.last_name %><%= current_user.last_name %><%= current_user.last_name %></p>
+    <p class="mypage-user-name"><%= truncate( @user.user_name,:length => 12)%></p>
+    <p class="mypage-user-introduction"><%= @user.introduction %></p>
     <p class="mypage-user-edit"><%= link_to 'プロフィール編集', edit_user_registration_path, :class => 'navbar-link' %></p>
   </div> 
 
