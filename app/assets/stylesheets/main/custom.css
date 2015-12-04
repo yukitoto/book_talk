@@ -102,3 +102,9 @@
   color: inherit;
 }
 
+.log-out-link{
+  font-size:15px;
+  float: right;
+  line-height: 13px;
+  margin-right: 15px;
+}
