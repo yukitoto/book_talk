@@ -8,6 +8,7 @@ class TopicsController < ApplicationController
 
   def show
     @comments = @topic.comments
+    @comment = Comment.new
   end
 
   def new
