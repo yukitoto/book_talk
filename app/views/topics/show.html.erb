@@ -1,6 +1,6 @@
 <%= link_to "<=", topics_path %>
 <h3><%= @topic.title %></h3>
-<p> <%= @topic.user.last_name %><%= @topic.user.first_name %></p>
+<p> <%= @topic.user.user_name %></p>
 <p><%= @topic.detail %></p>
 <p>作品名：<%= @topic.book_title %>/著者：<%= @topic.main_author %></p>
 <% if current_user %>
