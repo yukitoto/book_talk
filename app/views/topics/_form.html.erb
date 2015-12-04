@@ -10,17 +10,21 @@
   <%= form_for [@topic] do |f| %>
     <div class="row 50%">
       <div class="6u 12u(mobile)">
-        <%= f.text_field :title ,:placeholder => "タイトル"%>
+        <%= f.label :タイトル,:class => "topic-form-label"%>
+        <%= f.text_field :title ,:placeholder => "タイトル（３０文字）"%>
       </div>
       <div class="6u 12u(mobile)">
+        <%= f.label :作品名,:class => "topic-form-label"%>
         <%= f.text_field :book_title ,:placeholder => "作品名"%>
       </div>
       <div class="6u 12u(mobile)">
+        <%= f.label :主な著者,:class => "topic-form-label"%>
         <%= f.text_field :main_author ,:placeholder => "主な著者"%>
       </div>
     </div>
     <div class="row 50%">
       <div class="12u">
+        <%= f.label :投稿したい内容,:class => "topic-form-label"%>
         <%= f.text_area :detail ,:placeholder => "投稿したい内容" %>
       </div>
         <%= f.hidden_field :user_id , value: current_user.id %>

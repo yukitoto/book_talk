@@ -11,7 +11,7 @@
         <p class="topic-title"><%= topic.title %></p>
         <p class="topic-book-detail"><%= topic.book_title %>(<%= topic.main_author %>)</p>
         <div class="topic-detail-wrapper">
-          <p class="topic-detail"><%= topic.detail %></p>
+          <p class="topic-detail"><%= truncate(topic.detail,:length => 59)  %></p>
         </div>
         <div class="add-info-wrapper">
           <% @count = topic.comments.count %>
