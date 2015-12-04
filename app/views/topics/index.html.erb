@@ -5,7 +5,7 @@
         <div class="topic-user">
           <%= image_tag(topic.user.image.url(:thumbnail),:class => "topic-user-image") %>
           <p class="topic-user-name block_to_inline">
-          <%= topic.user_name %>
+          <%= topic.user.user_name %>
           </p>
         </div>
         <p class="topic-title"><%= topic.title %></p>
